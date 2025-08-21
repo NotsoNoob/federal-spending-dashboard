@@ -1,3 +1,4 @@
+import os
 # API Configuration
 API_BASE_URL = "https://api.usaspending.gov/api/v2"
 API_TIMEOUT = 90  #  to 90 seconds for better reliability
@@ -9,7 +10,7 @@ MAX_BATCHES = 2000  # Safety limit to prevent infinite loops (100 records × 200
 API_DELAY = 1  # Seconds to wait between requests (be respectful to API)
 
 # File paths
-DATA_DIR = "data"
+DATA_DIR = os.path.join(os.getcwd(), "data")
 CSV_FILENAME = "spending_data_unlimited.csv"  # Updated filename to reflect unlimited capability
 
 # Dashboard settings
